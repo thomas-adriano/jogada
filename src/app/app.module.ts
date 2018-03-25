@@ -6,7 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { Pro } from '@ionic/pro';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { SharedModule } from '@app/shared/shared.module';
+import { PlayroomPageModule } from '@app/playroom/playroom.module';
 
 Pro.init('6b122c30', {
   appVersion: '0.0.1'
@@ -35,17 +36,17 @@ export class MyErrorHandler implements ErrorHandler {
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage
+    MyApp
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    SharedModule,
+    PlayroomPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage
+    MyApp
   ],
   providers: [
     StatusBar,
