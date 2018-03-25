@@ -51,16 +51,16 @@ function applyPlugins(ionicConfigs) {
   if (DEV_ENV) {
     //dev plugins
     plugins.push(
-      new webpack.DefinePlugin({
-        ...commonsDefinePluginProps
-      })
+      new webpack.DefinePlugin(Object.assign(commonsDefinePluginProps, {
+
+      }))
     );
   } else {
     //prod plugins
     plugins.push(
-      new webpack.DefinePlugin({
-        ...commonsDefinePluginProps
-      })
+      new webpack.DefinePlugin(Object.assign(commonsDefinePluginProps, {
+
+      }))
     );
   }
 
