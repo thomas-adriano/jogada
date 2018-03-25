@@ -1,0 +1,15 @@
+<section class="game-chat">
+  <ul class="game-chat__message-list">
+    <li *ngFor="let message of messages" class="game-chat__message-list__message">
+      <span class="game-chat__message__author">
+        {{message.author}}
+      </span>
+      <span class="game-chat__message__content">
+        {{message.content}}
+      </span>
+      <span class="game-chat__message__timestamp">
+        {{message.timestamp}}
+      </span>
+    </li>
+  </ul>
+</section>

@@ -1,16 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Team } from '@app/core/model/team';
 
 @Component({
   selector: 'scoreboard',
   templateUrl: 'scoreboard.html'
 })
-export class ScoreboardComponent {
+export class ScoreboardComponent implements OnChanges {
 
-  text: string;
+  @Input()
+  public teamA = Team.nullInstance();
+  @Input()
+  public teamB = Team.nullInstance();
 
   constructor() {
-    console.log('Hello ScoreboardComponent Component');
-    this.text = 'Hello World';
+
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    let currentTeamA = changes.teamA.currentValue;
+    let currentTeamB = changes.teamB.currentValue;
+    if (Team.isNull(currentTeamA) || Team.isNull(currentTeamB)) {
+      this.teamA = Team.nullInstance();
+      this.teamB = Team.nullInstance();
+    }
   }
 
 }
