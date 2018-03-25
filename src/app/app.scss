@@ -1,16 +1,37 @@
-// http://ionicframework.com/docs/theming/
+@import '../../node_modules/normalize.css/normalize.css';
 
+$navy: #001F3F;
+$blue: #0074D9;
+$aqua: #7FDBFF;
+$teal: #39CCCC;
+$olive: #3D9970;
+$green: #2ECC40;
+$lime: #01FF70;
+$yellow: #FFDC00;
+$orange: #FF851B;
+$red: #FF4136;
+$fuchsia: #F012BE;
+$purple: #B10DC9;
+$maroon: #85144B;
+$white: #FEFEFE;
+$silver: #DDDDDD;
+$gray: #AAAAAA;
+$black: #111111;
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+:root {
+  --scoreboard-height: 3em;
+  --game-history-height: 8em;
+  --game-chat-height: calc(100% - calc(var(--scoreboard-height) + var(--game-history-height)));
+  --default-font-size: 0.8rem;
+}
+
+html, body {
+  font-size: var(--default-font-size);
+}
+
+.flex-row-centered {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

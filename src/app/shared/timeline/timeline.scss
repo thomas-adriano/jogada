@@ -1,3 +1,13 @@
-timeline {
+.timeline {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
+.timeline__item {
+  padding: 1em;
+}
+
+.timeline__item + .timeline__item {
+  padding-top: 0;
 }

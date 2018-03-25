@@ -1,5 +1,5 @@
 <ul class="timeline">
   <li *ngFor="let item of items" class="timeline__item">
-    {{item.description}} - {{item.occurrenceDate}}
+    {{item.description}} - {{item.occurrenceDate | date:'shortTime'}}
   </li>
 </ul>

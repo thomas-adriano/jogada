@@ -1,3 +1,27 @@
-game-chat {
+.game-chat {
+  height: var(--game-chat-height);
+}
 
+.game-chat__message-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.game-chat__message-list__message {
+  padding: 2em 1em;
+  bottom: 0;
+  position: relative;
+}
+
+.game-chat__message-list__message + .game-chat__message-list__message {
+  padding-top: 0;
+}
+
+.game-chat__message__timestamp {
+  font-size: calc(100% * 0.66);
+  display: block;
 }

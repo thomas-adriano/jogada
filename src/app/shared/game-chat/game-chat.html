@@ -1,15 +1,19 @@
-<section class="game-chat">
+<ion-content class="game-chat">
+  <ion-infinite-scroll (ionInfinite)="fetchMessages($event)" position="top">
+    <ion-infinite-scroll-content>
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
   <ul class="game-chat__message-list">
     <li *ngFor="let message of messages" class="game-chat__message-list__message">
       <span class="game-chat__message__author">
-        {{message.author}}
+        {{message.author}}:
       </span>
       <span class="game-chat__message__content">
         {{message.content}}
       </span>
       <span class="game-chat__message__timestamp">
-        {{message.timestamp}}
+        {{message.timestamp | date:'shortTime'}}
       </span>
     </li>
   </ul>
-</section>
+</ion-content>

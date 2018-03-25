@@ -1,3 +1,14 @@
-scoreboard {
+.scoreboard {
+  text-transform: uppercase;
+  height: var(--scoreboard-height);
+}
 
+.scoreboard__point {
+  background-color: $silver;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.scoreboard__point + .scoreboard__point {
+  background-color: $white;
 }

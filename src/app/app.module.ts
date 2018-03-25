@@ -8,6 +8,7 @@ import { Pro } from '@ionic/pro';
 import { MyApp } from './app.component';
 import { SharedModule } from '@app/shared/shared.module';
 import { PlayroomPageModule } from '@app/playroom/playroom.module';
+import { CoreModule } from '@app/core/core.module';
 
 Pro.init('6b122c30', {
   appVersion: '0.0.1'
@@ -41,6 +42,7 @@ export class MyErrorHandler implements ErrorHandler {
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    CoreModule,
     SharedModule,
     PlayroomPageModule
   ],
