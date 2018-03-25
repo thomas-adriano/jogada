@@ -1,0 +1,8 @@
+{
+  "name": "jogada",
+  "app_id": "6b122c30",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
